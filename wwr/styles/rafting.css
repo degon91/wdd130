@@ -1,0 +1,231 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap');
+
+/* Define CSS variables for the color palette */
+:root {
+    --primary-color: #264653;
+    --secondary-color: #2a9d8f;
+    --accent1-color: #e9c46a;
+    --accent2-color: #f4a261;
+    --accent-red: #eb866f;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --background-light: #f8f8f8;
+
+    --heading-font: 'Anton', sans-serif;
+    --body-font: 'Fjalla One', sans-serif;
+}
+
+/* Reset CSS box-model properties */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Style the entire document body text content */
+body {
+    font-family: var(--body-font);
+    color: var(--accent1-color);
+    /* Using accent1-color for body text as an example */
+    background-color: var(--background-light);
+}
+
+/* Limit page width and center content */
+header,
+main,
+footer {
+    width: 840px;
+    /* Example width */
+    margin: 0 auto;
+}
+
+/* Style headings */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+    font-weight: normal;
+    /* Anton is typically bold by default, resetting if needed */
+}
+
+/* Basic consistent margin and padding for common elements */
+nav,
+p,
+section,
+article {
+    margin: 16px;
+    padding: 8px;
+}
+
+/* Styles for the hero section in main (moved from inline style) */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('https://placehold.co/1200x400/2a9d8f/ffffff?text=Rafting+Hero+Image');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-light);
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    color: var(--accent1-color);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Styles for article and section elements (moved from inline style) */
+article,
+section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article img {
+    max-width: 200px;
+    height: auto;
+    border-radius: 50%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+article p {
+    overflow: hidden;
+}
+
+.adventure-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.adventure-images img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Header specific styles (moved from inline style) */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo {
+    margin-bottom: 10px;
+}
+
+header .logo h1 {
+    margin: 0;
+    color: var(--accent1-color);
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    padding: 5px 0;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: var(--accent2-color);
+}
+
+/* Footer specific styles (moved from inline style) */
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+footer .socialmedia {
+    margin-top: 10px;
+}
+
+footer .socialmedia a {
+    display: inline-block;
+    margin: 0 10px;
+    text-decoration: none;
+    /* Remove underlines from social media links */
+}
+
+footer .socialmedia img {
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s ease;
+}
+
+footer .socialmedia img:hover {
+    transform: scale(1.1);
+}
+
+footer .footer-nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    list-style: none;
+    margin-top: 10px;
+}
+
+footer .footer-nav ul li {
+    margin: 0 10px;
+}
+
+footer .footer-nav ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-nav ul li a:hover {
+    color: var(--accent1-color);
+}
