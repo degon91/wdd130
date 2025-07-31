@@ -79,9 +79,39 @@ article {
 }
 
 .hero h1 {
+    position: absolute;
+    /* Positioned absolutely within .hero */
+    top: 20%;
+    /* Adjust vertical position as needed */
+    left: 50%;
+    transform: translateX(-50%);
+    /* Center horizontally */
     font-size: 3.5rem;
     color: var(--accent1-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    z-index: 2;
+    /* Ensure it's above the image and potentially other content */
+}
+
+.hero article {
+    position: absolute;
+    /* Positioned absolutely within .hero */
+    top: 50%;
+    /* Adjust vertical position as needed, relative to h1 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* Center both horizontally and vertically */
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    color: var(--text-dark);
+    /* Darker text for readability on light background */
+    max-width: 80%;
+    /* Limit width for better readability */
+    z-index: 2;
+    /* Ensure it's above the image */
 }
 
 /* Styles for article and section elements (moved from inline style) */
