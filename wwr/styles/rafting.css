@@ -244,6 +244,42 @@ nav ul li a:hover {
     transform: translateY(-2px); /* Slight lift effect on hover */
 }
 
+/* Employee Profiles Section Styling */
+.employee-profiles {
+    display: flex; /* Arrange items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
+    justify-content: space-around; /* Distribute items evenly with space around them */
+    gap: 20px; /* Space between employee profile cards */
+    margin-top: 20px; /* Space below the "Meet Our Team!" heading */
+}
+
+.employee-profiles figure {
+    flex: 0 1 200px; /* Allow items to grow/shrink, with a base width of 200px */
+    margin: 0; /* Remove default figure margin */
+    text-align: center; /* Center image and caption */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.employee-profiles figure img {
+    width: 100%; /* Make image fill the figure width */
+    max-width: 150px; /* Limit image size for consistency */
+    height: 150px; /* Fixed height for consistent image size */
+    object-fit: cover; /* Crop image to fit */
+    border-radius: 50%; /* Make images circular */
+    margin-bottom: 10px; /* Space between image and caption */
+    border: 3px solid var(--secondary-color); /* Add a border for visual appeal */
+}
+
+.employee-profiles figcaption {
+    font-weight: bold;
+    color: var(--primary-color);
+    font-size: 1.1em;
+}
+
+
 /* Footer specific styles */
 footer {
     background-color: var(--primary-color);

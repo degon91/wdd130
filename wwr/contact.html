@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Get in touch with Rafting Adventures Co. for inquiries, bookings, or any questions about our whitewater rafting trips. Find our contact details and send us a message.">
+    <meta name="author" content="Rafting Adventures Co. Team">
+    <title>Contact Us - Rafting Adventures Co.</title>
+    <!-- Google Fonts preconnect links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Link to google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fjalla+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles/rafting.css">
+</head>
+
+<body>
+    <!-- Header section -->
+    <header>
+        <!-- Rafting site logo -->
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Rafting Adventures Co. Logo">
+        </div>
+
+        <!-- Navigation menu -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Hero Section -->
+        <div class="hero">
+            <img src="images/hero.jpeg" alt="Rafting Adventures Co. Hero Image">
+            <h1>Contact Us</h1>
+            <div class="hero-content">
+                <img src="images/contact.jpeg" alt="Contact placeholder image in hero content">
+                <p>Have questions about our trips, bookings, or anything else? Feel free to reach out to us! We're here
+                    to help you plan your perfect whitewater rafting adventure.</p>
+            </div>
+        </div>
+
+        <!-- Contact Form/Details Section -->
+        <section class="contact-details-section">
+            <h2>Get in Touch!</h2>
+            <p><strong>Email:</strong> info@raftingadventures.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Address:</strong> 123 River Road, Adventure City, RA 12345</p>
+
+            <h3>Find Us on the Map:</h3>
+            <div class="map-container">
+                <!-- Embedded Google Map - Replace with your actual map embed code -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.259011778972!2d-111.8910183845945!3d40.76077927932821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8752f205a1e7d32b%3A0x6b8d2e6d2f3a6a9b!2sSalt%20Lake%20City%2C%20UT!5e0!3m2!1sen!2sus!4v1678888888888!5m2!1sen!2sus"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+
+            <h3>Send us a Message:</h3>
+            <form class="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <fieldset>
+                    <legend>Purpose of your message:</legend>
+                    <input type="radio" id="generalInquiry" name="purpose" value="general" required>
+                    <label for="generalInquiry">General Inquiry</label><br>
+                    <input type="radio" id="reservationQuestion" name="purpose" value="reservation">
+                    <label for="reservationQuestion">Reservation Question</label><br>
+                    <input type="radio" id="websiteSuggestion" name="purpose" value="website">
+                    <label for="websiteSuggestion">Website Suggestion</label>
+                </fieldset>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Please subscribe me to the monthly newsletter</label>
+                </div>
+
+                <button type="submit">Send Your Message</button>
+            </form>
+        </section>
+
+        <!-- Employee Profiles Section -->
+        <section class="employee-profiles-section">
+            <h2>Meet Our Team!</h2>
+            <div class="employee-profiles">
+                <figure>
+                    <img src="images/em-susan.jpeg" alt="Susan Herera - Lead Guide">
+                    <figcaption>Susan Herera - Lead Guide</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/em-jane.jpeg" alt="Jane Smith - Operations Manager">
+                    <figcaption>Jane Smith - Operations Manager</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/em-anna.jpeg" alt="Anna FLores - Safety Coordinator">
+                    <figcaption>Anna Flores - Safety Coordinator</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2025 Rafting Adventures Co. | Decio Goncalves</p>
+        <nav class="socialmedia">
+            <a href="https://facebook.com">
+                <img src="images/facebook.jpeg" alt="Facebook Icon">
+            </a>
+            <a href="https://twitter.com">
+                <img src="images/twiterx.png" alt="Twitter Icon">
+            </a>
+            <a href="https://instagram.com">
+                <img src="images/Insta.jpeg" alt="Instagram Icon">
+            </a>
+        </nav>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="#privacy">Privacy Policy</a></li>
+                <li><a href="#terms">Terms of Service</a></li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>
