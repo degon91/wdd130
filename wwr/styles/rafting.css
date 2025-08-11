@@ -11,7 +11,6 @@
     --text-light: #ffffff;
     --text-dark: #333333;
     --background-light: #f8f8f8;
-
     --heading-font: 'Anton', sans-serif;
     --body-font: 'Fjalla One', sans-serif;
 }
@@ -26,287 +25,172 @@
 /* Style the entire document body text content */
 body {
     font-family: var(--body-font);
-    color: var(--accent1-color);
-    /* Using accent1-color for body text as an example */
+    color: var(--text-dark);
     background-color: var(--background-light);
+    line-height: 1.6;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 
-/* Limit page width and center content */
-header,
-main,
-footer {
-    width: 840px;
-    /* Example width */
+/* Page Layout Container */
+.container {
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 2rem;
 }
 
 /* Style headings */
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
     font-family: var(--heading-font);
     color: var(--primary-color);
     font-weight: normal;
-    /* Anton is typically bold by default, resetting if needed */
+    margin-bottom: 0.5em;
 }
 
-/* Basic consistent margin and padding for common elements */
-nav,
-p,
-section,
-article {
-    margin: 16px;
-    padding: 8px;
+/* Consistent Margin for common elements */
+section, article {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Styles for the hero section in main */
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .logo img {
+    max-height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent1-color);
+}
+
+/* Hero Section */
 .hero {
-    position: relative; /* Essential for positioning children absolutely */
+    position: relative;
     width: 100%;
     height: 400px;
     background-image: url('https://placehold.co/1200x400/2a9d8f/ffffff?text=Rafting+Hero+Image');
     background-size: cover;
     background-position: center;
-    display: flex; /* Using flex to help center content initially, but absolute positioning will override for h1/article */
+    display: flex;
     justify-content: center;
     align-items: center;
     color: var(--text-light);
     text-align: center;
     border-radius: 8px;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 2rem;
 }
 
 .hero h1 {
-    position: absolute; /* Positioned absolutely within .hero */
-    top: 20%; /* Adjust vertical position as needed */
-    left: 50%;
-    transform: translateX(-50%); /* Center horizontally */
     font-size: 3.5rem;
     color: var(--accent1-color);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-    z-index: 2; /* Ensure it's above the image and potentially other content */
+    z-index: 2;
 }
 
-.hero .hero-content {
-    position: absolute; /* Positioned absolutely within .hero */
-    top: 50%; /* Adjust vertical position as needed, relative to h1 */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center both horizontally and vertically */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for readability */
-    padding: 20px;
+.hero-content {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    color: var(--text-dark); /* Darker text for readability on light background */
-    max-width: 80%; /* Limit width for better readability */
-    z-index: 2; /* Ensure it's above the image */
-    display: flex; /* Use flex for internal layout of hero-content */
-    align-items: center; /* Vertically align items in hero-content */
-    gap: 20px; /* Space between image and text in hero-content */
-    text-align: left; /* Align text within hero-content to the left */
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    z-index: 2;
 }
 
-.hero .hero-content img {
-    max-width: 150px; /* Adjust size of image within hero-content */
-    height: auto;
+.hero-content img {
+    max-width: 100px;
     border-radius: 8px;
 }
 
-.hero .hero-content p {
-    margin: 0; /* Remove default margin from paragraph within hero-content */
-    padding: 0;
+/* Mission Article */
+.mission-article {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
 }
 
-
-/* Styles for article and section elements */
-/* Note: The general 'article' rule below will still apply to articles outside .hero */
-article,
-section {
-    background-color: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-article img {
+.mission-article img {
     max-width: 200px;
     height: auto;
     border-radius: 50%;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-article p {
-    overflow: hidden;
-}
-
-/* History Section Grid Layout */
+/* History Section */
 .history-grid {
     display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Text | Image | Text - 'auto' sizes the column to its content */
-    gap: 20px;
-    align-items: center; /* Vertically align items in the grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
 }
 
 .history-grid img {
-    max-width: 100%; /* Ensure image fits within its grid column */
-    height: auto;
-    display: block; /* Remove extra space below image */
+    width: 100%;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Adventure Images Grid Layout */
+/* Adventure Images Section */
 .adventure-images {
-    display: grid; /* This makes it a grid container */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* This creates responsive columns */
-    gap: 10px; /* Provides spacing between images */
-    margin-top: 20px;
-}
-
-.adventure-images figure {
-    margin: 0; /* Removes default margin from figure elements */
-    text-align: center; /* Centers the image and caption within each figure */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 2rem;
 }
 
 .adventure-images img {
-    width: 100%; /* Ensures images fill their grid column */
-    height: 120px; /* Fixed height for consistency */
-    object-fit: cover; /* Crops images to fit without distortion */
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.adventure-images figcaption {
-    margin-top: 5px; /* Space between image and caption */
-    font-size: 0.9em;
-    color: var(--text-dark);
-}
-
-/* Header specific styles */
-header {
-    background-color: var(--primary-color);
-    color: var(--text-light);
-    padding: 1rem 20px; /* Added horizontal padding for better spacing */
-    display: grid;
-    grid-template-columns: auto 1fr; /* Logo on left, nav takes remaining space */
-    align-items: center; /* Vertically align items */
-    gap: 20px; /* Space between logo and nav */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Added subtle shadow for depth */
-}
-
-header .logo {
-    margin-bottom: 0;
-}
-
-header .logo img {
-    max-height: 80px; /* Adjust logo size */
-    display: block; /* Ensures no extra space below the image */
-    border-radius: 5px; /* Slightly rounded corners for the logo */
-}
-
-header .logo h1 {
-    margin: 0;
-    color: var(--accent1-color);
-    font-size: 2.5rem;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Already flex, good for horizontal nav items */
-    justify-content: flex-end; /* Align navigation items to the right */
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 0 15px; /* Spacing between nav items */
-}
-
-nav ul li a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.2s ease; /* Added transform for hover effect */
-    padding: 8px 15px; /* Increased padding for better click/tap area */
-    display: block; /* Makes the padding effective */
-    border-radius: 5px; /* Rounded corners for nav links */
-}
-
-nav ul li a:hover {
-    color: var(--accent2-color);
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle background on hover */
-    transform: translateY(-2px); /* Slight lift effect on hover */
-}
-
-/* Employee Profiles Section Styling */
-.employee-profiles {
-    display: flex; /* Arrange items horizontally */
-    flex-wrap: wrap; /* Allow items to wrap to the next line on smaller screens */
-    justify-content: space-around; /* Distribute items evenly with space around them */
-    gap: 20px; /* Space between employee profile cards */
-    margin-top: 20px; /* Space below the "Meet Our Team!" heading */
-}
-
-.employee-profiles figure {
-    flex: 0 1 200px; /* Allow items to grow/shrink, with a base width of 200px */
-    margin: 0; /* Remove default figure margin */
-    text-align: center; /* Center image and caption */
-    background-color: #fff;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.employee-profiles figure img {
-    width: 100%; /* Make image fill the figure width */
-    max-width: 150px; /* Limit image size for consistency */
-    height: 150px; /* Fixed height for consistent image size */
-    object-fit: cover; /* Crop image to fit */
-    border-radius: 50%; /* Make images circular */
-    margin-bottom: 10px; /* Space between image and caption */
-    border: 3px solid var(--secondary-color); /* Add a border for visual appeal */
-}
-
-.employee-profiles figcaption {
-    font-weight: bold;
-    color: var(--primary-color);
-    font-size: 1.1em;
-}
-
-
-/* Footer specific styles */
+/* Footer Styles */
 footer {
     background-color: var(--primary-color);
     color: var(--text-light);
-    padding: 1rem 20px; /* Added horizontal padding */
-    margin-top: 20px;
-    display: grid; /* Changed to grid for flexible layout */
-    grid-template-columns: 1fr auto; /* Copyright text takes 1fr, social media takes auto */
-    align-items: center; /* Vertically align items */
-    gap: 20px; /* Gap between copyright and social media */
-}
-
-footer p {
-    margin: 0; /* Remove default margin */
-    text-align: left; /* Align copyright text to the left */
+    padding: 1rem 2rem;
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer .socialmedia {
-    margin-top: 0; /* Remove previous margin-top */
-    display: flex; /* Use flex to arrange social icons horizontally */
-    gap: 15px; /* Space between social media icons */
-    justify-content: flex-end; /* Align social media icons to the right within their grid cell */
-}
-
-footer .socialmedia a {
-    display: inline-block;
-    text-decoration: none;
+    display: flex;
+    gap: 1rem;
 }
 
 footer .socialmedia img {
@@ -317,32 +201,4 @@ footer .socialmedia img {
 
 footer .socialmedia img:hover {
     transform: scale(1.1);
-}
-
-footer .footer-nav {
-    grid-column: 1 / -1; /* Make the footer navigation span all columns */
-    text-align: center; /* Center the footer navigation */
-    margin-top: 10px; /* Add some space above the footer nav */
-}
-
-footer .footer-nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 0;
-    list-style: none;
-    margin: 0; /* Remove default margin */
-}
-
-footer .footer-nav ul li {
-    margin: 0 10px;
-}
-
-footer .footer-nav ul li a {
-    color: var(--text-light);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer .footer-nav ul li a:hover {
-    color: var(--accent1-color);
 }
